@@ -35,21 +35,15 @@ public class Main {
         giantController2.updateView();
 
 
-        List<GiantController> itemList = Arrays.asList(giantController,giantController2); //zamiast itemlist.add mozna uzyc Arrays.asList()
-
-        GiantModel model = new GiantModel(itemList,1);
+        List<GiantController> monsterList = Arrays.asList(giantController,giantController2);
 
         ObjectMapper mapper = new ObjectMapper();
+
         File file = new File("monsters.json");
         file.createNewFile();
+        mapper.writeValue(file,monsterList);
 
 
-        mapper.writeValue(file,model);
-
-        List<GiantModel> myObjects = mapper.readValue(new File("monsters.json"), new TypeReference<List<GiantModel>>(){});
-        for(GiantModel giantModel: myObjects){
-            System.out.println(giantModel.toString());
-        }
 
     }
 }

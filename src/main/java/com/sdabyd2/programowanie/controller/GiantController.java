@@ -9,15 +9,15 @@ import com.sdabyd2.programowanie.model.Health;
 import com.sdabyd2.programowanie.model.Norishment;
 import com.sdabyd2.programowanie.view.GiantView;
 
+import java.util.List;
+
 
 public class GiantController {
 
     private GiantModel giantModel;
     private GiantView giantView;
 
-
     public GiantController(){}
-
 
     public GiantController(GiantModel giantModel,
                            GiantView giantView){

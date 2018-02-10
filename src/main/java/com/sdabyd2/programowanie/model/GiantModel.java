@@ -3,6 +3,7 @@ package com.sdabyd2.programowanie.model;
 import com.sdabyd2.programowanie.*;
 import com.sdabyd2.programowanie.controller.GiantController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GiantModel {
@@ -11,13 +12,7 @@ public class GiantModel {
     private Norishment norishment;
     private Fatigue fatigue;
 
-
-    public GiantModel() {}
-
-    public GiantModel(List<GiantController> giantModels,int id){
-        this.health = health;
-        this.norishment = norishment;
-        this.fatigue = fatigue;
+    public GiantModel() {
     }
 
     public GiantModel(Health health,
@@ -27,7 +22,6 @@ public class GiantModel {
         this.norishment = norishment;
         this.fatigue = fatigue;
     }
-
 
     public Health getHealth() {
         return health;
